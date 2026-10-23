@@ -155,9 +155,9 @@ section { padding: 75px 0; }
 .avatar {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   border-radius: 12px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
