@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Experience and education of Vu Van An.">
-  <meta name="author" content="Vu Van An">
-  <title>Skills - Vu Van An</title>
+  <meta name="description" content="Technical competencies, core research proficiencies, and educational background of Minh Quan Dang (Dang Minh Quân) - HUST SoICT.">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Skills &amp; Background - Minh Quan Dang | HUST SoICT</title>
   <link rel="icon" href="navicon.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -13,96 +13,172 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
+      <a href="index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
       <nav class="nav" id="nav">
         <a href="index.html">About</a>
-        <a href="skills.html" aria-current="page">Skills</a>
-        <a href="publications.html">Publications</a>
+        <a href="publications.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="awards.html">Awards</a>
-        <a href="colleagues.html">Colleagues</a>
+        <a href="skills.html" aria-current="page">Skills</a>
+        <a href="colleagues.html">Advisors &amp; Labs</a>
         <a href="blog.html">Blog</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="alt-section" id="experience">
+    <section class="alt-section" id="skills-overview">
       <div class="container">
+        <p class="section-label">TECHNICAL COMPETENCY MATRIX</p>
+        <div class="section-heading">
+          <h2>Skills &amp; Experience</h2>
+          <a class="text-link" href="assets/CV.pdf" target="_blank" rel="noreferrer">Full Academic CV (PDF) ↗</a>
+        </div>
+
+        <!-- Technical Competencies Grid -->
+        <div class="research-grid" style="margin-bottom: 50px;">
+          <article class="research-card">
+            <div class="card-icon">⚡</div>
+            <h3>Distributed Systems &amp; Big Data</h3>
+            <p>
+              High-throughput data streaming, resilient distributed datasets, and graph query optimization.
+            </p>
+            <div class="tags">
+              <span>Apache Spark</span>
+              <span>Spark SQL</span>
+              <span>Structured Streaming</span>
+              <span>GraphFrames</span>
+              <span>Apache Kafka</span>
+              <span>MinIO / Parquet</span>
+              <span>Lineage Tracking</span>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-icon">💻</div>
+            <h3>Systems &amp; High-Performance Computing</h3>
+            <p>
+              Hardware-conscious implementation, cache-friendly data layouts, and memory optimization.
+            </p>
+            <div class="tags">
+              <span>C++17 / C++20</span>
+              <span>STL Optimization</span>
+              <span>Cache Coherence</span>
+              <span>Memory Locality</span>
+              <span>POSIX / Linux</span>
+              <span>GDB / Valgrind</span>
+              <span>Make / CMake</span>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-icon">🛡️</div>
+            <h3>Program Analysis &amp; Security</h3>
+            <p>
+              Static code analysis, semantic vulnerability prediction, and abstract syntax tree parsing.
+            </p>
+            <div class="tags">
+              <span>AST Parsing</span>
+              <span>Control Flow Graphs (CFG)</span>
+              <span>Program Dependence</span>
+              <span>Vulnerability Prediction</span>
+              <span>Static Analysis</span>
+              <span>Git Security</span>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-icon">📊</div>
+            <h3>Data Science &amp; Machine Learning</h3>
+            <p>
+              Statistical modeling, frequent pattern mining, and interactive data visualization.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Pandas / NumPy</span>
+              <span>Scikit-learn</span>
+              <span>Apriori Mining</span>
+              <span>Streamlit</span>
+              <span>Docker</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Academic & Research Experience -->
         <div class="section-grid block">
-          <h2>Experience</h2>
+          <h2>Research Experience</h2>
           <div class="timeline">
             <div class="timeline-item entry">
-              <time>2025.11 - Now</time>
+              <time>2025.04 - Present</time>
               <div>
-                <h3>Research Assistant</h3>
-                <p class="org"><a class="inline-link" href="https://soict.hust.edu.vn/en/departments/bkai-center" target="_blank" rel="noreferrer">BKAI Lab</a> · <a class="inline-link" href="https://hust.edu.vn/" target="_blank" rel="noreferrer">Hanoi University of Science and Technology</a></p>
+                <h3>Undergraduate Researcher</h3>
+                <p class="org">
+                  <strong>Software Engineering and Decentralized Systems (SEDS) Lab</strong> · 
+                  <a class="inline-link" href="https://soict.hust.edu.vn/" target="_blank" rel="noreferrer">SoICT, HUST</a>
+                </p>
+                <p style="color: var(--muted); font-size: 14px; margin-bottom: 8px;">Advisor: Dr. Tran Van Dang</p>
                 <ul>
-                  <li>Leading lab initiatives in biometric and biotechnological computer vision to improve automated identification accuracy.</li>
-                  <li>Integrating evolutionary computing techniques to optimize model performance on complex biological imaging tasks.</li>
-                  <li>Providing technical leadership and support for research projects in both computer vision and optimization.</li>
+                  <li>Conducting research on distributed graph processing architectures and runtime execution bottlenecks using Apache Spark and GraphFrames.</li>
+                  <li>Designing low-overhead fine-grained provenance tracking and lineage persistence mechanisms for iterative graph algorithms.</li>
+                  <li>Targeting research manuscript preparation on resilient provenance tracking for distributed iterative algorithms.</li>
                 </ul>
               </div>
             </div>
+
             <div class="timeline-item entry">
-              <time>2024.10 - Now</time>
+              <time>2025.10 - Present</time>
               <div>
-                <h3>Co-Founder</h3>
-                <p class="org"><a class="inline-link" href="https://www.linkedin.com/company/hibiscus-co" target="_blank" rel="noreferrer">Hibiscus Co</a></p>
+                <h3>Undergraduate Researcher</h3>
+                <p class="org">
+                  <strong>AI4Code Research Laboratory</strong> · 
+                  <a class="inline-link" href="https://soict.hust.edu.vn/" target="_blank" rel="noreferrer">HUST</a>
+                </p>
+                <p style="color: var(--muted); font-size: 14px; margin-bottom: 8px;">Lead: Assoc. Prof. Huynh Quyet Thang</p>
                 <ul>
-                  <li>Co-founded a software technology startup whose members specialize in artificial intelligence and cyber security.</li>
-                  <li>Competed as Hibiscus Company, winning Third Place at Viettel AI Race 2026 and Second Place at SCIC Q1 2026 with BAIStudio.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item entry">
-              <time>2025.06 - 2025.11</time>
-              <div>
-                <h3>Project Intern</h3>
-                <p class="org">VNPT Cyber Immunity · Vietnam Posts and Telecommunications Group (VNPT)</p>
-                <ul>
-                  <li>Built and deployed internal and external AI chatbots for flagship enterprise products with a cross-functional team.</li>
-                  <li>Optimized chatbot logic and response generation to improve user engagement and support efficiency.</li>
-                  <li>Assisted in developing conversational AI models tailored to telecommunications services.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item entry">
-              <time>2024.09 - 2025.10</time>
-              <div>
-                <h3>AI Researcher</h3>
-                <p class="org">BAILab · National Economics University</p>
-                <ul>
-                  <li>Conducted research under faculty supervision on NLP and AI agent architectures.</li>
-                  <li>Designed and implemented retrieval-augmented generation (RAG) systems for medical informatics.</li>
-                  <li>Evaluated large language models for retrieving sensitive medical data in clinical decision support.</li>
+                  <li>Investigating automated vulnerability prediction methodologies in complex C/C++ systems codebases.</li>
+                  <li>Synthesizing Abstract Syntax Trees (AST) and Control-Flow Graphs (CFG) into graph neural structures for semantic defect detection.</li>
+                  <li>Benchmarking vulnerability classifiers against real-world CVE repositories and common static analysis tools.</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="section-grid block">
+        <!-- Education Section -->
+        <div class="section-grid block" style="margin-top: 60px;">
           <h2>Education</h2>
           <div class="timeline">
             <div class="timeline-item entry">
-              <time>2024 - 2028</time>
+              <time>2024 - 2028 (Expected)</time>
               <div>
-                <h3>Bachelor's Degree in Computer Science</h3>
-                <p class="org">School of Information and Communication Technology (SoICT) · <a class="inline-link" href="https://hust.edu.vn/" target="_blank" rel="noreferrer">Hanoi University of Science and Technology</a></p>
-                <p>CPA: 3.37 / 4.00</p>
+                <h3>Bachelor of Science in Computer Science (IT1 - Honors Track)</h3>
+                <p class="org">
+                  <strong>School of Information and Communication Technology (SoICT)</strong> · 
+                  <a class="inline-link" href="https://hust.edu.vn/" target="_blank" rel="noreferrer">Hanoi University of Science and Technology</a>
+                </p>
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>📈 <strong>Cumulative GPA:</strong> 4.00 / 4.00 (Classification: Excellent / Xuất sắc)</li>
+                  <li>🌟 <strong>Training Score (Điểm Rèn luyện):</strong> 96 / 100</li>
+                  <li>🏆 <strong>Scholarships:</strong> HUST Type A Talent Encouragement Scholarship (KKHT), TKV Corporate Scholarship</li>
+                  <li>🎯 <strong>Core Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming (C++), Operating Systems, Computer Architecture, Database Systems, Linear Algebra, Probability &amp; Statistics.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-wrap">
-      <span>© 2026 Vu Van An</span>
-      <span>Built with Luv · Hosted on GitHub Pages</span>
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Built for Academic Excellence</span>
     </div>
   </footer>
 </body>

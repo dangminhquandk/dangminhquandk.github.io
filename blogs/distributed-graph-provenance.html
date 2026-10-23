@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical essay on Fine-Grained Data Provenance in Distributed Graph Iterations by Minh Quan Dang (HUST SoICT).">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Distributed Graph Provenance - Minh Quan Dang</title>
+  <link rel="icon" href="../navicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav class="nav" id="nav">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Research</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../awards.html">Awards</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../colleagues.html">Advisors &amp; Labs</a>
+        <a href="../blog.html" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="post">
+      <div class="container post-body" style="max-width: 780px; margin: 0 auto; padding: 40px 0 80px;">
+        <a class="text-link back-link" href="../blog.html">← Back to Blog</a>
+        <p class="section-label">TECHNICAL ESSAY · DISTRIBUTED SYSTEMS</p>
+        <h1 style="font-size: clamp(28px, 4vw, 38px); line-height: 1.25; margin: 8px 0 16px; letter-spacing: -0.03em;">
+          Fine-Grained Data Provenance in Distributed Graph Iterations: The Spark &amp; GraphFrames Challenge
+        </h1>
+        <p style="color: var(--muted); font-size: 14px; margin-bottom: 28px;">
+          Published on September 28, 2026 · By <strong>Minh Quan Dang</strong> · SEDS Lab, SoICT, HUST
+        </p>
+
+        <div class="prose">
+          <p>
+            Distributed graph computation engines—such as Apache Spark's GraphX and GraphFrames—are widely recognized as workhorses for massive network analytics. Whether executing PageRank, Label Propagation (LPA), or Connected Components, these algorithms share an iterative computational paradigm: vertex states are continually updated based on message passing along adjacent edges across successive supersteps.
+          </p>
+
+          <h3 style="font-size: 22px; margin: 28px 0 12px; color: var(--text);">The Provenance Dilemma</h3>
+          <p>
+            While execution speed and fault tolerance have historically dominated distributed systems research, <em>provenance</em> (or data lineage)—the detailed audit trail explaining exactly which source vertices and intermediate computations produced a specific final state—has emerged as a foundational requirement for security, regulatory compliance, and post-hoc debugging.
+          </p>
+          <p>
+            However, capturing fine-grained vertex-level provenance introduces a severe tension in Spark's execution model:
+          </p>
+          <ul>
+            <li><strong>Lineage Graph Explosion:</strong> Each iterative superstep appends new transformation stages to the underlying RDD Directed Acyclic Graph (DAG). After 30 to 50 iterations, the JVM driver encounters substantial memory pressure simply serializing and managing the RDD lineage.</li>
+            <li><strong>Checkpointing Overhead:</strong> While periodically truncating RDD lineage via <code>rdd.checkpoint()</code> solves the driver memory leak, it truncates the very lineage graph required to reconstruct provenance back to the raw source data.</li>
+          </ul>
+
+          <h3 style="font-size: 22px; margin: 28px 0 12px; color: var(--text);">Architectural Remedy: Decoupled Provenance Streams</h3>
+          <p>
+            In our ongoing research at SEDS Lab, we address this trade-off by decoupling the <em>provenance recording path</em> from the <em>execution scheduling path</em>. Rather than embedding provenance metadata inside RDD dependencies, intermediate transition deltas are emitted as asynchronous lineage logs persisted to columnar Parquet partitions.
+          </p>
+          <p>
+            By compressing vertex transformation vectors using run-length and bit-packed encodings, we observe that provenance capture overhead can be contained within 4–7% of standard execution time, allowing deterministic backward replay without penalizing iterative convergence.
+          </p>
+
+          <div style="margin-top: 36px; padding: 20px; background: #f8fafc; border: 1px solid var(--line); border-radius: 8px;">
+            <p style="margin: 0; font-size: 14px; color: var(--muted);">
+              <strong>Research Status:</strong> Dang, M. Q., &amp; Tran, V. D. (2026). <em>Efficient Distributed Graph Processing and Provenance Tracking in Large-Scale Analytics</em>. Manuscript in preparation, SEDS Lab, SoICT, HUST.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Built for Academic Excellence</span>
+    </div>
+  </footer>
+</body>
+</html>

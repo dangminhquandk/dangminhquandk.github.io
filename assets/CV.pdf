@@ -1,0 +1,118 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2925 >>
+stream
+BT
+/F1 18 Tf
+50 800 Td
+(DANG MINH QUAN (DK)) Tj
+0 -22 Td
+/F2 10 Tf
+(Undergraduate Researcher | Computer Science (IT1), SoICT - HUST) Tj
+0 -14 Td
+(Email: quan.dm@hust.edu.vn | GitHub: github.com/dangminhquandk | Web: dangminhquandk.github.io) Tj
+0 -22 Td
+/F1 12 Tf
+(EDUCATION) Tj
+0 -15 Td
+/F2 10 Tf
+(Hanoi University of Science and Technology (HUST) - School of ICT) Tj
+0 -13 Td
+(B.S. in Computer Science (IT1) | 2024 - 2028 (Expected)) Tj
+0 -13 Td
+(Cumulative GPA: 4.00 / 4.00 (Classification: Excellent / Xuat sac) | Training Score: 96 / 100) Tj
+0 -22 Td
+/F1 12 Tf
+(RESEARCH AFFILIATIONS & ADVISORS) Tj
+0 -15 Td
+/F2 10 Tf
+(- Software Engineering and Decentralized Systems (SEDS) Lab) Tj
+0 -13 Td
+(  Advisor: Dr. Tran Van Dang | Focus: Distributed Graph Processing, Apache Spark, Provenance) Tj
+0 -15 Td
+(- AI4Code Research Laboratory) Tj
+0 -13 Td
+(  Advisor: Assoc. Prof. Huynh Quyet Thang | Focus: Software Security, Vulnerability Prediction) Tj
+0 -22 Td
+/F1 12 Tf
+(RESEARCH MANUSCRIPTS IN PROGRESS) Tj
+0 -15 Td
+/F2 10 Tf
+(- Distributed Graph Processing and Provenance Tracking in Large-Scale Analytics) Tj
+0 -13 Td
+(  Mentored by Dr. Tran Van Dang, SEDS Lab (Manuscript in Preparation)) Tj
+0 -15 Td
+(- Deep Semantic Graph Representation for Vulnerability Prediction in C/C++ Codebases) Tj
+0 -13 Td
+(  Mentored by Assoc. Prof. Huynh Quyet Thang, AI4Code Lab (Research in Progress)) Tj
+0 -22 Td
+/F1 12 Tf
+(KEY TECHNICAL & RESEARCH PROJECTS) Tj
+0 -15 Td
+/F2 10 Tf
+(- Real-time Clickstream Data Pipeline: Kafka, Spark Structured Streaming, Parquet Lakehouse, MinIO) Tj
+0 -14 Td
+(- MarketLens: E-commerce Association Rule Mining (Apriori Algorithm) on UCI Retail Data) Tj
+0 -14 Td
+(- High-Performance Spam Filtering Engine: Modern C++17 from scratch (Naive Bayes & KNN)) Tj
+0 -14 Td
+(- VUA TSA BACH KHOA: Educational ecosystem for logic reasoning (TSA), calculus, and algorithms) Tj
+0 -22 Td
+/F1 12 Tf
+(ACADEMIC HONORS & AWARDS) Tj
+0 -15 Td
+/F2 10 Tf
+(- Talent Encouragement Scholarship Type A (Hoc bong KKHT Xuat sac) - HUST (GPA 4.0/4.0, Training 96/100)) Tj
+0 -13 Td
+(- TKV Corporate Talent Scholarship (Vietnam National Coal and Mineral Industries Holding)) Tj
+0 -13 Td
+(- Second Prize, City-level Physics Olympiad (Grade 12), Hanoi) Tj
+0 -13 Td
+(- Third Prize, City Science & Engineering Fair (ViSEF / NCKH), Hanoi) Tj
+0 -13 Td
+(- HUST Thinking Skills Assessment (TSA) Entrance Score: 89.97 / 100) Tj
+0 -13 Td
+(- National High School Graduation Exam Score (Group A00): 28.85 / 30.00 (Math 9.6, Phys 9.75, Chem 9.5)) Tj
+0 -22 Td
+/F1 12 Tf
+(TECHNICAL SKILLS) Tj
+0 -15 Td
+/F2 10 Tf
+(- Distributed Systems: Apache Spark, Spark SQL, Structured Streaming, GraphFrames, Apache Kafka, MinIO) Tj
+0 -13 Td
+(- Programming & Systems: C++17/20 (STL, cache-friendly design), Python (Pandas, Scikit-learn), Linux/POSIX) Tj
+0 -13 Td
+(- Program Analysis: AST & Control Flow Graphs (CFG), Vulnerability Modeling, Static Code Analysis) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000263 00000 n 
+0000003240 00000 n 
+0000003315 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3385
+%%EOF

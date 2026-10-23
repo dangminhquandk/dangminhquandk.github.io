@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical essay on Hardware-Conscious C++ and Zero-Allocation Algorithmic Inference by Minh Quan Dang.">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Hardware-Conscious C++ - Minh Quan Dang</title>
+  <link rel="icon" href="../navicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav class="nav" id="nav">
+        <a href="../index.html">About</a>
+        <a href="../publications.html">Research</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../awards.html">Awards</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../colleagues.html">Advisors &amp; Labs</a>
+        <a href="../blog.html" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="post">
+      <div class="container post-body" style="max-width: 780px; margin: 0 auto; padding: 40px 0 80px;">
+        <a class="text-link back-link" href="../blog.html">← Back to Blog</a>
+        <p class="section-label">SYSTEMS OPTIMIZATION · C++17</p>
+        <h1 style="font-size: clamp(28px, 4vw, 38px); line-height: 1.25; margin: 8px 0 16px; letter-spacing: -0.03em;">
+          Hardware-Conscious C++: Zero-Allocation Principles in Algorithmic Inference
+        </h1>
+        <p style="color: var(--muted); font-size: 14px; margin-bottom: 28px;">
+          Published on June 14, 2026 · By <strong>Minh Quan Dang</strong> · HUST SoICT
+        </p>
+
+        <div class="prose">
+          <p>
+            In contemporary software development, machine learning is predominantly implemented via high-level Python libraries. While frameworks like PyTorch or Scikit-learn excel in rapid experimentation, they abstract away the critical mechanical realities of the modern memory hierarchy: cache-line fills, branch prediction penalties, and heap fragmentation.
+          </p>
+
+          <h3 style="font-size: 22px; margin: 28px 0 12px; color: var(--text);">Why Build from Scratch?</h3>
+          <p>
+            In constructing our High-Performance Spam Filtering Engine in C++17, our primary goal was to achieve sub-millisecond per-document classification latency with zero dynamic heap allocations in the critical inference path.
+          </p>
+
+          <h3 style="font-size: 22px; margin: 28px 0 12px; color: var(--text);">Core Architectural Tenets</h3>
+          <ol>
+            <li>
+              <strong>Contiguous Memory &amp; Cache-Line Alignment:</strong> Modern CPUs fetch data in 64-byte cache lines. Traditional pointer-based data structures (linked lists, node trees) result in pervasive cache misses. By storing document feature vectors in flat, contiguous <code>std::vector&lt;uint32_t&gt;</code> structures with 64-byte alignment, prefetchers operate at peak efficiency.
+            </li>
+            <li>
+              <strong>Zero Heap Allocation on Hot Paths:</strong> Invoking <code>malloc</code> or <code>new</code> inside tight inner loops introduces locking contention and non-deterministic latency. Using fixed-size stack buffers (<code>std::array</code>) and scratchpad arena allocators ensures deterministic execution.
+            </li>
+            <li>
+              <strong>Log-Space Probability Accumulation:</strong> Multiplying small float probabilities causes arithmetic underflow. Shifting to log-space converts products into additions (<code>log(P(A|B)) = log(P(A)) + sum(log(P(w_i|A)))</code>), unlocking compiler auto-vectorization (SIMD) opportunities.
+            </li>
+          </ol>
+
+          <p>
+            Writing systems code with hardware empathy bridges theoretical algorithmic analysis with practical mechanical performance.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Built for Academic Excellence</span>
+    </div>
+  </footer>
+</body>
+</html>

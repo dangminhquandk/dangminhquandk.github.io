@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Selected projects of Vu Van An.">
-  <meta name="author" content="Vu Van An">
-  <title>Projects - Vu Van An</title>
+  <meta name="description" content="Technical & research projects by Minh Quan Dang - Real-time Kafka/Spark clickstream lakehouse, MarketLens data mining, C++17 spam filter, and Vua TSA Bach Khoa edtech platform.">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Projects - Minh Quan Dang | Distributed Systems &amp; Software Engineering</title>
   <link rel="icon" href="navicon.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -13,14 +13,18 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
+      <a href="index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
       <nav class="nav" id="nav">
         <a href="index.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="publications.html">Publications</a>
+        <a href="publications.html">Research</a>
         <a href="projects.html" aria-current="page">Projects</a>
         <a href="awards.html">Awards</a>
-        <a href="colleagues.html">Colleagues</a>
+        <a href="skills.html">Skills</a>
+        <a href="colleagues.html">Advisors &amp; Labs</a>
         <a href="blog.html">Blog</a>
       </nav>
     </div>
@@ -29,39 +33,117 @@
   <main>
     <section class="alt-section" id="projects">
       <div class="container">
-        <!-- <p class="section-label">PROJECTS</p> -->
+        <p class="section-label">ENGINEERING &amp; RESEARCH SYSTEMS</p>
         <div class="section-heading">
-          <h2>Active projects</h2>
-          <a class="text-link" href="https://github.com/AnVuVa" target="_blank" rel="noreferrer">All GitHub projects ↗</a>
+          <h2>Featured Projects</h2>
+          <a class="text-link" href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">All Repositories on GitHub ↗</a>
         </div>
+
         <div class="project-grid">
+          <!-- Project 1: Real-time Clickstream Data Pipeline -->
           <article class="project-card">
-            <div class="project-top"><span>BIOTECHNOLOGY</span><span>ACTIVE</span></div>
-            <h3>Spatial Transcriptomics</h3>
+            <div class="project-top">
+              <span class="project-category">Distributed Systems &amp; Streaming</span>
+              <span class="paper-status" style="font-size: 10px; padding: 2px 8px;">Completed / Verified</span>
+            </div>
+            <h3>Real-time Clickstream Data Pipeline</h3>
             <p>
-              Predicting spatial gene expression from histology images with
-              biology-guided, local-global residual propagation.
+              A fault-tolerant distributed streaming engine capturing and processing continuous e-commerce user activity logs with sub-second latencies. Ingests events via Apache Kafka, performs stateful tumbling/sliding window aggregation and sessionization using Spark Structured Streaming, and persists partitioned Parquet datasets into a MinIO S3 Lakehouse connected to an interactive Streamlit analytics dashboard.
             </p>
-            <div class="tags"><span>Biotechnology</span><span>Computational Pathology</span></div>
+            <div class="tags" style="margin-bottom: 20px;">
+              <span class="tag-badge accent">Apache Spark</span>
+              <span class="tag-badge accent">Apache Kafka</span>
+              <span class="tag-badge">Structured Streaming</span>
+              <span class="tag-badge">MinIO / S3</span>
+              <span class="tag-badge">Parquet Lakehouse</span>
+              <span class="tag-badge">Streamlit</span>
+              <span class="tag-badge">Python</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">
+                View Source on GitHub ↗
+              </a>
+              <span class="award-tag" style="font-size: 12px; color: var(--light-muted);">SEDS Lab</span>
+            </div>
           </article>
+
+          <!-- Project 2: MarketLens -->
           <article class="project-card">
-            <div class="project-top"><span>3D VISION</span><span>ACTIVE</span></div>
-            <h3>Endoscopic 3D Gaussian Splatting</h3>
+            <div class="project-top">
+              <span class="project-category">Data Mining &amp; Analytics</span>
+              <span class="paper-status" style="font-size: 10px; padding: 2px 8px;">Active</span>
+            </div>
+            <h3>MarketLens – E-commerce Data Mining</h3>
             <p>
-              Reconstructing dynamic, deformable endoscopic scenes with
-              3D Gaussian Splatting.
+              An automated association rule discovery and market basket mining engine tailored for retail analytics. Implements optimized Apriori candidate generation, anti-monotonic frequency pruning, and rule evaluation (Support, Confidence, Lift, Leverage, Conviction) evaluated on the benchmark UCI Online Retail dataset to uncover consumer purchasing affinities and cross-selling correlations.
             </p>
-            <div class="tags"><span>3DGS</span><span>Endoscopy</span></div>
+            <div class="tags" style="margin-bottom: 20px;">
+              <span class="tag-badge accent">Data Mining</span>
+              <span class="tag-badge accent">Apriori Algorithm</span>
+              <span class="tag-badge">Association Rules</span>
+              <span class="tag-badge">Python</span>
+              <span class="tag-badge">Pandas</span>
+              <span class="tag-badge">Scikit-learn</span>
+              <span class="tag-badge">UCI Benchmark</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">
+                View Source on GitHub ↗
+              </a>
+              <span class="award-tag" style="font-size: 12px; color: var(--light-muted);">Machine Learning</span>
+            </div>
           </article>
+
+          <!-- Project 3: High-Performance Spam Filtering Engine -->
           <article class="project-card">
-            <div class="project-top"><span>BIOMETRICS</span><span>ACTIVE</span></div>
-            <h3>Fingerprint Recognition</h3>
+            <div class="project-top">
+              <span class="project-category">High-Performance C++ &amp; Systems</span>
+              <span class="paper-status" style="font-size: 10px; padding: 2px 8px;">Benchmarked</span>
+            </div>
+            <h3>High-Performance Spam Filtering Engine</h3>
             <p>
-              Unified fingerprint recognition and presentation attack detection,
-              identity-aware latent fingerprint restoration, and fast large-scale
-              identification with minutiae-free graph transformers.
+              A zero-dependency, cache-aware machine learning inference and training engine written from scratch in modern C++17. Implements multinomial Naive Bayes with Laplace smoothing and vectorized K-Nearest Neighbors (KNN) with custom tokenizers, inverted indices, and SIMD-friendly vector layouts for ultra-low latency inference, integrated with a lightweight Python/Streamlit demonstration layer.
             </p>
-            <div class="tags"><span>Biometrics</span><span>Security</span></div>
+            <div class="tags" style="margin-bottom: 20px;">
+              <span class="tag-badge accent">C++17 From Scratch</span>
+              <span class="tag-badge accent">Naive Bayes</span>
+              <span class="tag-badge">KNN</span>
+              <span class="tag-badge">Cache-Conscious</span>
+              <span class="tag-badge">NLP Tokenizer</span>
+              <span class="tag-badge">Python C-API</span>
+              <span class="tag-badge">Streamlit</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">
+                View Source on GitHub ↗
+              </a>
+              <span class="award-tag" style="font-size: 12px; color: var(--light-muted);">Low-Latency</span>
+            </div>
+          </article>
+
+          <!-- Project 4: VUA TSA BÁCH KHOA -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">EdTech &amp; Algorithmic Platform</span>
+              <span class="paper-status" style="font-size: 10px; padding: 2px 8px;">Production / Community</span>
+            </div>
+            <h3>VUA TSA BÁCH KHOA Ecosystem</h3>
+            <p>
+              A specialized digital educational platform delivering advanced mathematical reasoning, algorithmic training, calculus, and logical deduction curriculum for the HUST Thinking Skills Assessment (TSA) and national STEM competitions. Features automated problem generators, step-by-step analytical breakdowns, and algorithmic complexity sandboxes.
+            </p>
+            <div class="tags" style="margin-bottom: 20px;">
+              <span class="tag-badge accent">EdTech Ecosystem</span>
+              <span class="tag-badge accent">Logic Reasoning (TSA)</span>
+              <span class="tag-badge">Calculus &amp; Linear Algebra</span>
+              <span class="tag-badge">Competitive Algorithms</span>
+              <span class="tag-badge">Community Impact</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">
+                Ecosystem Repository ↗
+              </a>
+              <span class="award-tag" style="font-size: 12px; color: var(--light-muted);">Education</span>
+            </div>
           </article>
         </div>
       </div>
@@ -70,8 +152,8 @@
 
   <footer>
     <div class="container footer-wrap">
-      <span>© 2026 Vu Van An</span>
-      <span>Built with Luv · Hosted on GitHub Pages</span>
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Built for Academic Excellence</span>
     </div>
   </footer>
 </body>

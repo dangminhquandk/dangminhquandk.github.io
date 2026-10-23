@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog posts by Vu Van An.">
-  <meta name="author" content="Vu Van An">
-  <title>Blog - Vu Van An</title>
+  <meta name="description" content="Technical essays, research notes, and reflections on distributed computing, systems optimization, and software security by Minh Quan Dang.">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Academic Blog &amp; Notes - Minh Quan Dang | HUST SoICT</title>
   <link rel="icon" href="navicon.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -13,60 +13,85 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
+      <a href="index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
       <nav class="nav" id="nav">
         <a href="index.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="publications.html">Publications</a>
+        <a href="publications.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="awards.html">Awards</a>
-        <a href="colleagues.html">Colleagues</a>
+        <a href="skills.html">Skills</a>
+        <a href="colleagues.html">Advisors &amp; Labs</a>
         <a href="blog.html" aria-current="page">Blog</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="blog">
+    <section class="alt-section" id="blog">
       <div class="container">
+        <p class="section-label">WRITINGS &amp; WORKING NOTES</p>
         <div class="section-heading">
-          <h2>Blog</h2>
+          <h2>Technical Essays &amp; Notes</h2>
         </div>
+        <p class="prose intro-text" style="margin-bottom: 36px;">
+          Perspectives on distributed systems architectures, hardware-conscious algorithmic design, and research methodology.
+        </p>
 
-        <article class="paper">
-          <div class="paper-year">2026.09.16</div>
-          <div>
-            <h3><a class="post-link" href="blogs/blog-hello-world.html">Hello, world</a></h3>
+        <!-- Blog Posts List -->
+        <article class="paper-card">
+          <div class="paper-badge-row">
+            <span class="paper-status" style="background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8;">Technical Essay</span>
+            <span class="paper-year">2026.09.28</span>
+          </div>
+          <h3>
+            <a class="post-link" href="blogs/distributed-graph-provenance.html">
+              Fine-Grained Data Provenance in Distributed Graph Iterations: The Spark &amp; GraphFrames Challenge
+            </a>
+          </h3>
+          <p class="award-desc" style="margin-bottom: 14px;">
+            Iterative graph algorithms like PageRank and Connected Components generate massive RDD lineage graphs that can quickly saturate driver memory and degrade execution throughput. In this note, we examine stage-aware lineage compression and decoupled checkpointing strategies to maintain complete provenance tracking with negligible overhead.
+          </p>
+          <div class="tags">
+            <span class="tag-badge accent">Distributed Systems</span>
+            <span class="tag-badge">Apache Spark</span>
+            <span class="tag-badge">Data Provenance</span>
+            <span class="tag-badge">SEDS Lab</span>
           </div>
         </article>
-      </div>
-    </section>
 
-    <section class="alt-section" id="gallery">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Gallery</h2>
-        </div>
-        <div class="gallery-grid">
-          <a class="gallery-item" href="assets/Gallery/547650754_2181974928979443_3141606075648643518_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/547650754_2181974928979443_3141606075648643518_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/655146676_1937606676840761_5466779766867851332_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/655146676_1937606676840761_5466779766867851332_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/658424418_1480656360264840_5531501507271362023_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/658424418_1480656360264840_5531501507271362023_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/667520166_2360653737778227_5426885988059626949_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/667520166_2360653737778227_5426885988059626949_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/720589581_1536233331373809_4475178029647480430_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/720589581_1536233331373809_4475178029647480430_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/721468372_2418308955346038_3536854364997222624_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/721468372_2418308955346038_3536854364997222624_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/727313713_2426287007881566_4041797199838443037_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/727313713_2426287007881566_4041797199838443037_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/774205939_2475528836290716_2097966266689920957_n.jpg" target="_blank" rel="noreferrer"><img src="assets/Gallery/774205939_2475528836290716_2097966266689920957_n.jpg" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/HibiscusCo_Members.png" target="_blank" rel="noreferrer"><img src="assets/Gallery/HibiscusCo_Members.png" alt="" loading="lazy"></a>
-          <a class="gallery-item" href="assets/Gallery/image.png" target="_blank" rel="noreferrer"><img src="assets/Gallery/IMG_20230916_174059.jpg" alt="" loading="lazy"></a>
-        </div>
+        <article class="paper-card">
+          <div class="paper-badge-row">
+            <span class="paper-status" style="background: #fdf2f8; border-color: #fbcfe8; color: #9d174d;">Systems Optimization</span>
+            <span class="paper-year">2026.06.14</span>
+          </div>
+          <h3>
+            <a class="post-link" href="blogs/hardware-conscious-cpp.html">
+              Hardware-Conscious C++: Zero-Allocation Principles in Algorithmic Inference
+            </a>
+          </h3>
+          <p class="award-desc" style="margin-bottom: 14px;">
+            Why building machine learning algorithms like Naive Bayes and KNN from scratch in C++17 without heavy frameworks uncovers essential mechanical sympathy: cache-line alignment, vectorized contiguous storage, and branch predictor considerations.
+          </p>
+          <div class="tags">
+            <span class="tag-badge accent">C++17</span>
+            <span class="tag-badge">Cache-Conscious</span>
+            <span class="tag-badge">Algorithms</span>
+            <span class="tag-badge">Performance</span>
+          </div>
+        </article>
+
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-wrap">
-      <span>© 2026 Vu Van An</span>
-      <span>Built with Luv · Hosted on GitHub Pages</span>
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Built for Academic Excellence</span>
     </div>
   </footer>
 </body>

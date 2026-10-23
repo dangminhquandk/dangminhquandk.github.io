@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Selected publications of Vu Van An.">
-  <meta name="author" content="Vu Van An">
-  <title>Publications - Vu Van An</title>
+  <meta name="description" content="Research manuscripts, ongoing investigations, and working papers of Minh Quan Dang (Dang Minh Quân) - SEDS Lab & AI4Code Lab, HUST.">
+  <meta name="author" content="Minh Quan Dang">
+  <title>Research &amp; Manuscripts - Minh Quan Dang | SEDS &amp; AI4Code Lab</title>
   <link rel="icon" href="navicon.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -13,14 +13,18 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
+      <a href="index.html" class="brand-sign">
+        <span class="monogram">DK</span>
+        <span>Minh Quan Dang</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
       <nav class="nav" id="nav">
         <a href="index.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="publications.html" aria-current="page">Publications</a>
+        <a href="publications.html" aria-current="page">Research</a>
         <a href="projects.html">Projects</a>
         <a href="awards.html">Awards</a>
-        <a href="colleagues.html">Colleagues</a>
+        <a href="skills.html">Skills</a>
+        <a href="colleagues.html">Advisors &amp; Labs</a>
         <a href="blog.html">Blog</a>
       </nav>
     </div>
@@ -29,59 +33,103 @@
   <main>
     <section class="alt-section" id="publications">
       <div class="container">
-        <!-- <p class="section-label">PUBLICATIONS</p> -->
+        <p class="section-label">INVESTIGATION &amp; MANUSCRIPTS</p>
         <div class="section-heading">
-          <h2>Publications</h2>
-          <a class="text-link" href="https://orcid.org/0009-0004-4899-5892" target="_blank" rel="noreferrer">ORCID ↗</a>
+          <h2>Research &amp; Manuscripts in Preparation</h2>
+          <div style="display: flex; gap: 14px; align-items: center;">
+            <a class="text-link" href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+            <a class="text-link" href="https://orcid.org" target="_blank" rel="noreferrer">ORCID ↗</a>
+          </div>
         </div>
 
-        <article class="paper">
-          <div class="paper-year">2026 Oct</div>
-          <div>
-            <h3>Biology-Guided Local-Global Residual Propagation for Spatial Gene Expression Prediction from Histology</h3>
-            <p class="authors"><strong>Vu Van An</strong>, Nguyen Duy Long, Ho Viet Duc Luong, Nguyen P. Binh</p>
-            <p class="venue">Accepted WACV2027 (Core A)</p>
-            <div class="tags"><span>Biotechnology</span><span>Computational Pathology</span></div>
+        <p class="prose intro-text" style="margin-bottom: 36px;">
+          My research as an undergraduate researcher centers on empirical systems evaluation and algorithmic modeling across two specialized research laboratories at SoICT, HUST. Below are active manuscripts and ongoing investigations.
+        </p>
+
+        <!-- Ongoing Research 1: SEDS Lab -->
+        <article class="paper-card" id="paper-graph-provenance">
+          <div class="paper-badge-row">
+            <span class="paper-status" style="background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8;">
+              Manuscript in Preparation · Target Submission
+            </span>
+            <span class="paper-year">SEDS Lab · 2026</span>
+          </div>
+          <h3>Efficient Distributed Graph Processing and Provenance Tracking in Large-Scale Analytics</h3>
+          <p class="authors">
+            <strong>Minh Quan Dang</strong>, Tran Van Dang (Advisor)
+          </p>
+          <p class="venue">
+            Software Engineering and Decentralized Systems (SEDS) Lab, School of Information and Communication Technology, HUST.
+          </p>
+          <div class="paper-abstract">
+            <strong>Abstract &amp; Research Focus:</strong> Fine-grained data provenance in large-scale iterative graph computation is essential for debugging, compliance, and lineage attribution, yet traditional provenance recording introduces prohibitive execution and storage overheads. In this work, we investigate a resilient provenance tracking architecture built on Apache Spark and GraphFrames. By decoupling intermediate lineage emission from the core iterative execution loop and applying run-length and bit-packed vector compression, our framework aims to preserve fine-grained transformation traces across iterative algorithms (PageRank, Connected Components, Label Propagation) with minimal runtime penalty.
+          </div>
+          <div class="tags">
+            <span class="tag-badge accent">Distributed Graph Processing</span>
+            <span class="tag-badge">Apache Spark</span>
+            <span class="tag-badge">GraphFrames</span>
+            <span class="tag-badge">Data Provenance</span>
+            <span class="tag-badge">SEDS Lab</span>
+          </div>
+          <div class="paper-actions">
+            <a class="paper-btn" href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">Code &amp; Benchmarks ↗</a>
+            <button class="paper-btn bibtex-toggle" data-target="bibtex-seds2026" aria-expanded="false">
+              [Cite Draft]
+            </button>
+          </div>
+
+          <!-- BibTeX Drawer -->
+          <div class="bibtex-drawer" id="bibtex-seds2026">
+            <button class="copy-bibtex-btn" data-target="bibtex-code-seds2026">Copy BibTeX</button>
+            <pre id="bibtex-code-seds2026">@unpublished{dang2026graphprovenance,
+  author    = {Dang, Minh Quan and Tran, Van Dang},
+  title     = {Efficient Distributed Graph Processing and Provenance Tracking in Large-Scale Analytics},
+  note      = {Manuscript in preparation, SEDS Lab, School of Information and Communication Technology, Hanoi University of Science and Technology},
+  year      = {2026}
+}</pre>
           </div>
         </article>
 
-        <article class="paper">
-          <div class="paper-year">2026</div>
-          <div>
-            <h3>LFR-GAN: Identity-Aware Latent Fingerprint Restoration</h3>
-            <p class="authors">Binh An Nguyen, <strong>Van An Vu</strong>, Luong Uy Nguyen, Tuan Linh Dang</p>
-            <p class="venue">Under review</p>
-            <div class="tags"><span>Biometrics</span><span>Security</span></div>
+        <!-- Ongoing Research 2: AI4Code Lab -->
+        <article class="paper-card" id="paper-vuln-pred">
+          <div class="paper-badge-row">
+            <span class="paper-status" style="background: #fdf2f8; border-color: #fbcfe8; color: #9d174d;">
+              Research in Progress · AI4Code Lab
+            </span>
+            <span class="paper-year">AI4Code Lab · 2026</span>
           </div>
-        </article>
-
-        <article class="paper">
-          <div class="paper-year">2026</div>
-          <div>
-            <h3>Frequency-Gated Orthogonal Representation Learning for Unified Fingerprint Recognition and Presentation Attack Detection</h3>
-            <p class="authors">Binh An Nguyen, <strong>Van An Vu</strong>, Khanh Tung Hoang, Luong Uy Nguyen, Tuan Linh Dang</p>
-            <p class="venue">Under review</p>
-            <div class="tags"><span>Biometrics</span><span>Security</span></div>
+          <h3>Deep Semantic Graph Representation for Vulnerability Prediction in C/C++ Systems Codebases</h3>
+          <p class="authors">
+            <strong>Minh Quan Dang</strong>, Huynh Quyet Thang (Advisor)
+          </p>
+          <p class="venue">
+            AI4Code Research Laboratory, Hanoi University of Science and Technology.
+          </p>
+          <div class="paper-abstract">
+            <strong>Abstract &amp; Research Focus:</strong> Vulnerabilities in low-level systems software predominantly stem from intricate control- and data-flow interactions that escape surface-level token models. We investigate a hybrid representation linking Abstract Syntax Tree (AST) tokens, control-flow edges, and program dependence graphs to model vulnerability patterns in C/C++ projects, evaluating empirical defect classification against CVE benchmarks.
           </div>
-        </article>
-
-        <article class="paper">
-          <div class="paper-year">2026 Oct</div>
-          <div>
-            <h3>Accelerating Large-Scale Fingerprint Identification using Minutiae-Free Dynamic Graph Transformers</h3>
-            <p class="authors">Binh An Nguyen, Luong Uy Nguyen, <strong>Van An Vu</strong>, Ngoc Nam Khuc, Tuan Linh Dang</p>
-            <p class="venue">Accepted at Signal Processing Letter (Q1)</p>
-            <div class="tags"><span>Biometrics</span><span>Security</span></div>
+          <div class="tags">
+            <span class="tag-badge accent">Software Security</span>
+            <span class="tag-badge">Vulnerability Prediction</span>
+            <span class="tag-badge">Program Analysis</span>
+            <span class="tag-badge">AI4Code Lab</span>
+            <span class="tag-badge">C/C++</span>
           </div>
-        </article>
+          <div class="paper-actions">
+            <a class="paper-btn" href="https://github.com/dangminhquandk" target="_blank" rel="noreferrer">Research Tracker ↗</a>
+            <button class="paper-btn bibtex-toggle" data-target="bibtex-vuln2026" aria-expanded="false">
+              [Cite Draft]
+            </button>
+          </div>
 
-        <article class="paper">
-          <div class="paper-year">2026 Apr</div>
-          <div>
-            <h3>From Prompts to Pareto Fronts: Using Code LMs as Semantic Genetic Operators for Compiler Bug Discovery</h3>
-            <p class="authors">Lang Hong Nguyet Anh, Ho Viet Duc Luong, <strong>Vu Van An</strong></p>
-            <p class="venue">Full paper Accepted at GECCO2026 (BPA nominated)</p>
-            <div class="tags"><span>Optimization</span><span>Code LMs</span></div>
+          <div class="bibtex-drawer" id="bibtex-vuln2026">
+            <button class="copy-bibtex-btn" data-target="bibtex-code-vuln2026">Copy BibTeX</button>
+            <pre id="bibtex-code-vuln2026">@unpublished{dang2026deepsemantic,
+  author    = {Dang, Minh Quan and Huynh, Quyet Thang},
+  title     = {Deep Semantic Graph Representation for Vulnerability Prediction in C/C++ Systems Codebases},
+  note      = {Working manuscript, AI4Code Research Laboratory, Hanoi University of Science and Technology},
+  year      = {2026}
+}</pre>
           </div>
         </article>
       </div>
@@ -90,8 +138,8 @@
 
   <footer>
     <div class="container footer-wrap">
-      <span>© 2026 Vu Van An</span>
-      <span>Built with Luv · Hosted on GitHub Pages</span>
+      <span>© 2026 Minh Quan Dang (Đặng Minh Quân) · HUST SoICT</span>
+      <span>Hosted on GitHub Pages · Pure Academic Portfolio</span>
     </div>
   </footer>
 </body>
